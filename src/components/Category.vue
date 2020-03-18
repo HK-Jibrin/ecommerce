@@ -1,5 +1,5 @@
 <template>
-<b-container class="cat">
+<b-container class="cat" fluid>
  <b-row>
 <b-list-group>
   <b-list-group-item > {{ category.name }}</b-list-group-item>
@@ -19,7 +19,6 @@ export default {
 <style scoped>
 .cat{
   margin-top: 5px;
-  flex: auto;
 }
 
 </style>

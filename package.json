@@ -9,10 +9,12 @@
   "dependencies": {
     "bootstrap": "^4.4.1",
     "bootstrap-vue": "^2.7.0",
+    "carousel": "0.0.3",
     "core-js": "^3.6.4",
     "jquery": "^3.4.1",
     "popper.js": "^1.16.1",
     "vue": "^2.6.11",
+    "vue-carousel": "^0.18.0",
     "vue-router": "^3.1.5"
   },
   "devDependencies": {

@@ -2,13 +2,14 @@
   <div class="home">
     <Header />
 <b-container class="bv-example-row">
+  <Carousel />
   <b-row>
-    <b-col cols="4"><category v-for="cat in categories" :key="cat.id" :category="cat"/></b-col>
-    <b-col cols="10"><Products v-for="item in products" :key="item.id" :product="item" /></b-col>
+    <b-col cols><category v-for="cat in categories" :key="cat.id" :category="cat"/></b-col>
+    <b-col cols="10" >
+      <Products v-for="item in products" :key="item.id" :product="item" /></b-col>
   </b-row>
 </b-container>
-
-  </div>
+</div>
 </template>
 
 <script>
@@ -16,17 +17,20 @@
 import Category from '../components/Category.vue'
 import Header from '../components/Header.vue'
 import Products from '../components/Products.vue'
+import Carousel from '../components/Carousel.vue'
 
 export default {
   name: 'Home',
  components :{
     Category, 
     Header,
-    Products
+    Products,
+    Carousel
    
   },
   data(){
       return{
+
         categories: [
           {
             id : 1,
@@ -53,7 +57,7 @@ export default {
         },
         {
             id : 5,
-        name: "",
+        name: "vegetables",
         
           
         }
@@ -98,17 +102,23 @@ export default {
         name: 'Male Shirt',
         price: 4000
         },
-      //  {
-      //   id: 9,
-      //   imageLink: require("../assets/suzukibrezza.jpg") ,
-      //   name: 'Suzuki Brezza',
-      //   price: 250000
-      //   },
+       {
+        id: 8,
+        imageLink: require("../assets/suzukibrezza.jpg") ,
+        name: 'Suzuki Brezza',
+        price: 250000
+        },
         {
         id: 9,
         imageLink: require("../assets/yam-1.jpg") ,
         name: 'Suzuki Brezza',
         price: 250000
+        },
+        {
+        id: 10,
+        imageLink: require("../assets/spinach.jpg") ,
+        name: 'Natural Spinach',
+        price: 500  
         }
     ]
 
@@ -120,7 +130,7 @@ export default {
 
 <style>
 .bv-example-row{
- margin-top: 20px;
+ margin-top: 10px;
 }
 
 </style>
