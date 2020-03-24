@@ -1,8 +1,8 @@
 <template>
     <div id="header">
+         
         <b-navbar toggleable="lg" type="dark" variant="info">
             <b-navbar-brand href="#">Charalites  shpopping mall</b-navbar-brand>
-
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
             <b-collapse id="nav-collapse" is-nav>
@@ -17,9 +17,9 @@
 
                 <b-nav-item-dropdown text="Lang" right>
                 <b-dropdown-item href="#">EN</b-dropdown-item>
-                <b-dropdown-item href="#">ES</b-dropdown-item>
-                <b-dropdown-item href="#">RU</b-dropdown-item>
-                <b-dropdown-item href="#">FA</b-dropdown-item>
+                <b-dropdown-item href="#">Hausa</b-dropdown-item>
+                <b-dropdown-item href="#">Yaruba</b-dropdown-item>
+                <b-dropdown-item href="#">Igbo</b-dropdown-item>
                 </b-nav-item-dropdown>
 
                 <b-nav-item-dropdown right>
@@ -33,6 +33,7 @@
             </b-navbar-nav>
             </b-collapse>
         </b-navbar>
+        <router-view/>
     </div>
 </template>
 

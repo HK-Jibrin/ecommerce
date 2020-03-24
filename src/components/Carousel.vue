@@ -1,11 +1,13 @@
 <template>
+<div id="caro">
     
-        <carousel :perpage= 1 :mousedrag= "true" :autoplay= true>
+        <carousel :per-page="1" :mouse-drag= "true" :autoplay= true  :loop= true  :speed ="2000">
 
-            <slide v-for="image in carouselImage" :key="image.id"> 
-                <img style="width: 100%; height: 350px;" :src="image.imageUrl" />
+            <slide v-for="image in carouselImage" :key="image.imageUrl" >
+                <img :src="image.imageUrl"  width= 900; height= 300; />
             </slide>
         </carousel>
+</div>
     
 </template>
 <script>
@@ -15,17 +17,30 @@ export default {
     data(){
         return{
             carouselImage:[
-          {id: 1,
-         imageUrl: require("../assets/maize.jpg")  
+          {
+         imageUrl: require("../assets/banner.jpg")  
           },
-          {id: 2,
-         imageUrl: require("../assets/vegetables.jpg")  
-          }
+          {
+         imageUrl: require("../assets/made3.jpeg")  
+          },
+          {
+         imageUrl: require("../assets/powerbike.jpg")  
+          },
+
         ],
         }
     }
-    
-
-
-}
+    }
 </script>
+<style>
+#caro {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 20px;
+  /* height: 1000px; */
+}
+
+</style>

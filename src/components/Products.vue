@@ -1,10 +1,10 @@
 <template>
 <div class="hom">
    <div class="products">
-           <img :src="product.imageLink" height="150ppx" width="250px">
+           <img :src="product.imageLink" height="150" width="250">
     <p>{{product.name}}  </p>
-    <p> {{product.price}} </p>
-    <b-button href="#" variant="primary"> Buy Now </b-button>  
+    <p> &#8358; {{product.price}} </p>
+    <b-button  href="#" style="margin-top:10px" @click="gotoProductDetails(product.name)"> Buy Now </b-button>  
    </div>
 </div>
       
@@ -13,7 +13,12 @@
 
 export default {
     name: 'Products',
-    props: ["product"]
+    props: ["product"],
+    methods:{
+        gotoProductDetails(productId) {
+    this.$router.push({name:'products', params: {id:productId}})
+    }
+}
 }
 </script>
 <style scoped>
@@ -21,27 +26,21 @@ export default {
     padding: 0;
     margin: 0;
     margin-left: 10px;
-    margin-bottom: 10px;
-    border: 1px solid black;
+    margin-bottom: 1px;
+    border: 2px solid black;
     text-align: center;
     padding-top: 20px;
     background-color: whitesmoke;
     border-radius: 20px;
 }
 .hom{
-  width: 50%; 
+  width: 300px; 
+  margin-bottom: 10px;
+  margin-right: 10px;
    display: inline-block;
+
 }
+
  
 
 </style>
-
-
-
-
-
-
-
-
-
-
